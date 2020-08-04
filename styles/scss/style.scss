@@ -1,0 +1,94 @@
+@import 'setup';
+@import 'typography';
+@import 'mediaqueries';
+
+// $logoColour: #f50052;
+// $highlightColour: #f7a234;
+
+//  Global Properties
+
+body {
+  background-image: url(../assets/AgnesMartinUntitled1977.jpg);
+  height: 100vh;
+  background-size: 50%;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// .container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: 100px 100px 100px;
+//   grid-template-areas: 
+//     "header header aside" 
+//     "main main aside" 
+//     "footer footer footer";
+//   grid-gap: 15px;
+// }
+// .gridItem1 {
+//   grid-area: header;
+//   background: #80CBC4;
+// }	
+// .gridItem2 {
+//   grid-area: main;
+//   background: #E8D7FF;
+// }	
+// .gridItem3 {
+//   grid-area: aside;
+//   background: #63ADF2;
+// }	
+// .gridItem4 {
+//   grid-area: footer;
+//   background: #FFA630;
+// }
+
+
+// .topGrid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   // grid-template-rows: span 3;
+//   grid-gap: 10%;
+// }
+
+
+h3 {
+  // grid-column: span 4;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 40px;
+}
+
+
+ul {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit 3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 5%;
+}
+
+li img {
+  background-color: yellowgreen;
+  width: 100%;
+}
+
+
+
+
+
+p {
+  background-color: tomato;
+  height: 300px;
+}
+
+.x {
+  // grid-column-start: 1;
+  // grid-column-end: 3; is equal to:
+  // grid-column-start: span 2; which is equal to:
+  // grid-column: span 2;
+
+  grid-template-columns: 1fr (400px 1fr) 1fr;
+  background-color: wheat;
+}
