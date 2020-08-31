@@ -222,64 +222,305 @@ textarea {
 }
 
 body {
-  font-family: 'Inconsolata', Helvetica, Trebuchet;
+  font-family: 'Nunito', Helvetica, Trebuchet;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   text-decoration: none;
   text-align: justify;
 }
 
-h1 {
-  font-family: 'Nova Mono', Helvetica, Arial;
-  font-size: 120px;
-  text-align: center;
-  margin: 40px 0 20px 0;
+p {
+  font-size: 2.5vmin;
+  margin: 3vmin 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 4vmin 6vmin;
+  height: 100%;
+  -webkit-filter: drop-shadow(0 0 3px rgba(100, 46, 15, 0.1));
+          filter: drop-shadow(0 0 3px rgba(100, 46, 15, 0.1));
 }
 
-h2 {
-  font-family: 'Nova Mono', Helvetica, Arial;
-  font-size: 40px;
-  text-align: center;
-  margin: 20px 0 40px;
-}
-
-body {
-  background-image: url(../assets/AgnesMartinUntitled1977.jpg);
-  height: 100vh;
-  background-size: 50%;
-}
-
-main {
-  width: 80%;
-  margin: 0 auto;
+p span {
+  display: block;
+  padding-top: 2vmin;
 }
 
 h3 {
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 40px;
+  font-family: 'Nova Mono', Helvetica, Arial;
+  font-size: 5vmax;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3vmax 0 1vmax 0;
 }
 
-ul {
+body {
+  background-size: 33.3%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe6e67d), to(rgba(188, 168, 243, 0.1))), url(../assets/MartinClearDay.png);
+  background-image: linear-gradient(180deg, #ffe6e67d, rgba(188, 168, 243, 0.1)), url(../assets/MartinClearDay.png);
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-family: 'Nunito', Helvetica, Trebuchet;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+button span {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.6);
+  height: 20px;
+  width: 20px;
+}
+
+button span:hover {
+  background: white;
+}
+
+em {
+  border: 1px solid rgba(100, 46, 15, 0.4);
+  padding: 0 1vmax;
+  background: rgba(220, 200, 253, 0.411);
+}
+
+.space em {
+  background: rgba(89, 66, 128, 0.274);
+}
+
+header {
+  height: 90vmin;
+}
+
+.title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25vmin, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25vmin, 1fr));
+  gap: 4vw;
+  margin-top: 85px;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-family: 'Nova Mono', Helvetica, Arial;
+  font-size: 25vmin;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background: rgba(220, 200, 253, 0.411);
+  -webkit-filter: drop-shadow(-1px 1px 0.3px #ac7ef7);
+          filter: drop-shadow(-1px 1px 0.3px #ac7ef7);
+}
+
+.subHeading {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  font-family: 'Nunito', Helvetica, Trebuchet;
+  font-size: 4.5vmin;
+  line-height: auto;
+  text-decoration: none;
+  text-align: center;
+  background: transparent;
+  -webkit-filter: drop-shadow(-1px 1px 0.2px #ac7ef7);
+          filter: drop-shadow(-1px 1px 0.2px #ac7ef7);
+}
+
+.subHeading span {
+  border-bottom: 1px solid rgba(172, 126, 247, 0.5);
+}
+
+.buffer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 4fr 6fr 9fr 13fr 18fr 24fr 31fr 39fr 48fr;
+      grid-template-rows: 2fr 4fr 6fr 9fr 13fr 18fr 24fr 31fr 39fr 48fr;
+  height: 240px;
+}
+
+.buffer span {
+  border-bottom: 2px solid #684b97;
+  display: block;
+}
+
+.buffer span:first-child {
+  opacity: .15;
+}
+
+.buffer span:nth-child(2) {
+  opacity: .2;
+}
+
+.buffer span:nth-child(3) {
+  opacity: .25;
+}
+
+.buffer span:nth-child(4) {
+  opacity: .35;
+}
+
+.buffer span:nth-child(5) {
+  opacity: .4;
+}
+
+.buffer span:nth-child(6) {
+  opacity: .45;
+}
+
+.buffer span:nth-child(7) {
+  opacity: .5;
+}
+
+.buffer span:nth-child(8) {
+  opacity: .7;
+}
+
+.buffer span:nth-child(9) {
+  opacity: .8;
+}
+
+.buffer span:nth-child(10) {
+  opacity: 1;
+}
+
+.bufferTwo {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.why {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f9ebe52a), color-stop(30%, rgba(255, 255, 255, 0.6)), color-stop(70%, rgba(255, 255, 255, 0.5)), to(#f9ebe511)) 100%;
+  background: linear-gradient(180deg, #f9ebe52a 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.5) 70%, #f9ebe511) 100%;
+}
+
+.topGallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(30%, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-gap: 5%;
+  gap: 5%;
+  margin: 40px 0 15% 0;
 }
 
-li img {
-  background-color: yellowgreen;
+li {
   width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-filter: drop-shadow(0 0 3px rgba(100, 46, 15, 0.1));
+          filter: drop-shadow(0 0 3px rgba(100, 46, 15, 0.1));
 }
 
-p {
-  background-color: tomato;
-  height: 300px;
+.overlay {
+  position: absolute;
+  background: #fffdfb;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: .05s;
+  transition: .05s;
+  text-align: center;
+  margin: 0;
 }
 
-.x {
-  -ms-grid-columns: 1fr 400px 1fr 1fr;
-      grid-template-columns: 1fr 400px 1fr 1fr;
-  background-color: wheat;
+.overlay:hover {
+  opacity: .9;
+}
+
+.fourCorners {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(40vmax, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(40vmax, 1fr));
+  gap: 5%;
+  margin-bottom: 12%;
+}
+
+.fourCorners li {
+  background-color: white;
+  min-height: 30vw;
+}
+
+.fourCorners p {
+  margin: 0;
+  font-size: 1.6vmax;
+  padding: 30px;
+  line-height: 1.4;
+}
+
+.alberti,
+.durer {
+  background-image: url(../assets/alberti.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.durer {
+  background-image: url(../assets/Durer.png);
+}
+
+.bodyTwo {
+  background-size: 33.3%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #11110e12), to(#0e0e21b0)), url(../assets/MartinInverse.png);
+  background-image: linear-gradient(180deg, #11110e12 30%, #0e0e21b0), url(../assets/MartinInverse.png);
+}
+
+.bridge {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee8df), color-stop(30%, #eee8df7a), color-stop(90%, #0b0e1b00));
+  background: linear-gradient(180deg, #eee8df, #eee8df7a 30%, #0b0e1b00 90%);
+}
+
+.space {
+  color: #ffffff;
+}
+
+.space p {
+  background: rgba(32, 32, 53, 0.9);
+}
+
+.media {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr 1fr 1fr;
+      grid-template-columns: auto 1fr 1fr 1fr;
+  gap: 3vmax;
+  margin-bottom: 10vh;
+}
+
+.media li {
+  border: 1px solid rgba(245, 245, 245, 0.219);
+}
+
+.media p {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 512px) {
+  .subHeading {
+    -ms-grid-columns: (minmax(20px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  }
 }
