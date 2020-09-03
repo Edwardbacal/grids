@@ -3,7 +3,7 @@
 // $highlightColour: #f7a234;
 
 @mixin shadow {
-  filter: drop-shadow(0 0 3px rgba(100, 46, 15, .1));
+  filter: drop-shadow(0 2px 3px rgba(100, 46, 15, 0.2));
 }
 
 @mixin bodyText ($fontSize, $lineHeight) {
@@ -24,11 +24,32 @@ body {
   text-align: justify;
 }
 
+.heading {
+  @include displayText(25vmin);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background: rgba(220, 200, 253, 0.411);
+  filter: drop-shadow(-1px 1px .3px rgb(172, 126, 247));
+}
+
+.subHeading {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  @include bodyText(4.5vmin, auto);
+  text-align: center;
+  background: transparent;
+  filter: drop-shadow(-1px 1px .2px rgb(172, 126, 247));
+    span {
+      border-bottom: 1px solid rgba(172, 126, 247, 0.5);
+    }
+}
+
 p {
   font-size: 2.5vmin;
   margin: 3vmin 0;
   background-color: rgba(255, 255, 255, 0.85);;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   padding: 4vmin 6vmin;
   height: 100%;
   @include shadow;
@@ -43,4 +64,13 @@ h3 {
   text-transform: uppercase;
   text-align: center;
   padding: 3vmax 0 1vmax 0;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 2.2vmin;
+}
+
+.normalize {
+  font-style: normal;
 }
